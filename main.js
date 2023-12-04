@@ -53,13 +53,14 @@ window.addEventListener('keyup', (event) => {
     });
 });
 
+
 // asynchrone => execution d'une fonction en tache de fond et ne bloque pas le reste de l'execution du code
 // synchrone => s'arrête en attendant la fin de la tache et bloque tout le reste du code
 
 // ASYNCHRONE LA Troisième force de javascript
 // async function => function asynchrone 
 async function test() {
-    const response = await fetch('https://tyradex.vercel.app/api/v1') // await => attends la réponse https://github.com/G404-DWWM/Vanilla-Front-PromessesJSavant d'éxecuter la suite de la fonction
+    const response = await fetch('https://tyradex.vercel.app/api/v1') // await => attends la réponse avant d'éxecuter la suite de la fonction
     const pokemon = await response.json();
     return pokemon; // Ne retourne pas la variable, la valeur SEULEMENT
 }
